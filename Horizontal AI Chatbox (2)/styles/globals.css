@@ -1,0 +1,222 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  --background: linear-gradient(135deg, #0a0a0a 0%, #1a0000 50%, #000000 100%);
+  --foreground: #ffffff;
+  --card: linear-gradient(135deg, #1a1a1a 0%, #2a0505 50%, #1a1a1a 100%);
+  --card-foreground: #ffffff;
+  --popover: #1a1a1a;
+  --popover-foreground: #ffffff;
+  --primary: linear-gradient(135deg, #dc2626 0%, #7f1d1d 50%, #991b1b 100%);
+  --primary-foreground: #ffffff;
+  --secondary: linear-gradient(135deg, #404040 0%, #2a0505 50%, #404040 100%);
+  --secondary-foreground: #ffffff;
+  --muted: #2a2a2a;
+  --muted-foreground: #a3a3a3;
+  --accent: linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%);
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: rgba(220, 38, 38, 0.3);
+  --input: #1a1a1a;
+  --input-background: #2a2a2a;
+  --switch-background: #404040;
+  --font-weight-medium: 600;
+  --font-weight-normal: 400;
+  --ring: #dc2626;
+  --gaming-red: #dc2626;
+  --gaming-dark-red: #7f1d1d;
+  --gaming-black: #0a0a0a;
+  --gaming-gray: #1a1a1a;
+  --gaming-accent: #ff4444;
+  --radius: 0.75rem;
+  --sidebar: linear-gradient(180deg, #1a1a1a 0%, #2a0505 100%);
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #2a2a2a;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(220, 38, 38, 0.3);
+  --sidebar-ring: #dc2626;
+}
+
+.dark {
+  --background: linear-gradient(135deg, #0a0a0a 0%, #1a0000 50%, #000000 100%);
+  --foreground: #ffffff;
+  --card: linear-gradient(135deg, #1a1a1a 0%, #2a0505 50%, #1a1a1a 100%);
+  --card-foreground: #ffffff;
+  --popover: #1a1a1a;
+  --popover-foreground: #ffffff;
+  --primary: linear-gradient(135deg, #dc2626 0%, #7f1d1d 50%, #991b1b 100%);
+  --primary-foreground: #ffffff;
+  --secondary: linear-gradient(135deg, #404040 0%, #2a0505 50%, #404040 100%);
+  --secondary-foreground: #ffffff;
+  --muted: #2a2a2a;
+  --muted-foreground: #a3a3a3;
+  --accent: linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%);
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: rgba(220, 38, 38, 0.3);
+  --input: #1a1a1a;
+  --ring: #dc2626;
+  --sidebar: linear-gradient(180deg, #1a1a1a 0%, #2a0505 100%);
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #2a2a2a;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(220, 38, 38, 0.3);
+  --sidebar-ring: #dc2626;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-gaming-red: var(--gaming-red);
+  --color-gaming-dark-red: var(--gaming-dark-red);
+  --color-gaming-black: var(--gaming-black);
+  --color-gaming-gray: var(--gaming-gray);
+  --color-gaming-accent: var(--gaming-accent);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+/**
+ * Gaming UI enhancements
+ */
+@layer base {
+  .gaming-gradient-bg {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0000 50%, #000000 100%);
+  }
+  
+  .gaming-card-bg {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a0505 50%, #1a1a1a 100%);
+  }
+  
+  .gaming-red-gradient {
+    background: linear-gradient(135deg, #dc2626 0%, #7f1d1d 50%, #991b1b 100%);
+  }
+  
+  .gaming-glow {
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+  }
+  
+  .gaming-border {
+    border: 1px solid rgba(220, 38, 38, 0.5);
+  }
+  
+  .gaming-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .gaming-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(220, 38, 38, 0.4);
+  }
+}
+
+/**
+ * Base typography with gaming style
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      background: linear-gradient(135deg, #dc2626 0%, #ff4444 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
